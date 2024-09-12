@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Shooter Game</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+    #hud {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #000000;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+    }
+    #crosshair {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: url('public/textures/crosshair.png') no-repeat center center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+<div id="hud">
+  <p id="ammo">Ammo: 10</p>
+  <p id="health">Health: 100</p>
+  <p id="kills">Kills: 0</p>
+</div>
+<div id="crosshair"></div>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
